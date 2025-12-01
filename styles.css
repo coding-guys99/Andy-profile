@@ -1,0 +1,557 @@
+:root {
+  --bg: #0f172a;
+  --card: #020617;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.16);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 24px 12px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #020617 0%, #020617 55%, #020617 100%);
+  border-radius: 24px;
+  padding: 32px 26px 32px;
+  border: 1px solid var(--border);
+  box-shadow:
+    0 24px 80px rgba(15, 23, 42, 0.85),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.name-block {
+  flex: 1 1 260px;
+}
+
+.name-block h1 {
+  font-size: clamp(28px, 4vw, 34px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sub {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.header-right {
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.contact {
+  font-size: 14px;
+  text-align: right;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-ghost,
+.btn-primary {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.65);
+  color: var(--text);
+  backdrop-filter: blur(6px);
+  transition: 0.2s ease;
+}
+
+.btn-ghost:hover,
+.btn-primary:hover {
+  background: rgba(30, 64, 175, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* 內容區 */
+
+.sections {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 24px 18px 26px;
+  }
+
+  /* 手機版 header：左照片，右名字＋聯絡方式 */
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 4px;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+
+  .photo-block {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+  }
+
+  .name-block {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .header-right {
+    grid-row: 2;
+    grid-column: 2;
+    align-items: flex-start;
+  }
+
+  .contact {
+    text-align: left;
+  }
+
+  .sections {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
+
+section {
+  margin-bottom: 18px;
+}
+
+.sec-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.card {
+  background: #020617;
+  border-radius: 14px;
+  border: 1px solid rgba(31, 41, 55, 0.95);
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+.summary-text {
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+.job {
+  margin-bottom: 12px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.job-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.job-meta {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.job-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.bullet .dot {
+  margin-top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tag {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 3px 9px;
+  font-size: 11px;
+  color: var(--muted);
+  background: rgba(15, 23, 42, 0.95);
+  white-space: nowrap;
+}
+
+.skill-group {
+  margin-bottom: 10px;
+}
+
+.skill-group-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #e5e7eb;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.skill-list span {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 999px;
+  padding: 3px 8px;
+  border: 1px solid rgba(31, 41, 55, 0.95);
+}
+
+.strengths-list .bullet {
+  margin-bottom: 2px;
+}
+
+.edu-item {
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.edu-item span {
+  color: var(--muted);
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: #4b5563;
+}
+
+/* 列印用：隱藏按鈕、改成白底（想要深色 PDF 可以刪掉這一段） */
+/* ========= PDF 列印專用：高級科技公司風格 ========== */
+@media print {
+
+  /* A4 頁面設定 */
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+  }
+
+  /* 白底、黑字，移除所有陰影與圓角背景 */
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+    color: #111827 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+  }
+
+  .container {
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* 隱藏互動元件：按鈕、pill、深色用的 tag 等 */
+  .btn-row,
+  .btn-ghost,
+  .btn-primary,
+  .pill,
+  .tag-row {
+    display: none !important;
+  }
+
+  /* 頂部 header：左名字右聯絡資訊，科技簡約風 */
+  header {
+    border-bottom: 1px solid #e5e7eb !important;
+    padding-bottom: 8mm !important;
+    margin-bottom: 8mm !important;
+    gap: 0 !important;
+  }
+
+  .name-block {
+    flex: 1 1 auto !important;
+  }
+
+  .name-block h1 {
+    font-size: 26px !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    margin-bottom: 2mm !important;
+  }
+
+  .sub {
+    font-size: 11.5px !important;
+    color: #4b5563 !important;
+  }
+
+  .header-right {
+    align-items: flex-end !important;
+    gap: 4px !important;
+  }
+
+  .contact {
+    text-align: right !important;
+    font-size: 11.5px !important;
+    color: #374151 !important;
+  }
+
+  .contact a {
+    color: #111827 !important;
+    text-decoration: none !important;
+  }
+
+  /* 兩欄改單欄，符合國外履歷公版 */
+  .sections {
+    display: block !important;
+    margin-top: 0 !important;
+  }
+
+  section {
+    margin-bottom: 7mm !important;
+  }
+
+  /* 卡片變成透明區塊，只保留文字 */
+  .card {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 區塊標題：小藍字 + 大寫 + 細底線 */
+  .sec-title {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: #2563eb !important;
+    margin: 0 0 3mm !important;
+    padding-bottom: 1.5mm !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  /* 一般文字 */
+  .summary-text,
+  .job-title,
+  .job-subtitle,
+  .job-meta,
+  .bullet span,
+  .edu-item,
+  .i18n {
+    color: #111827 !important;
+    font-size: 11.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  .job-title {
+    font-weight: 600 !important;
+  }
+
+  .job-meta {
+    font-size: 11px !important;
+    color: #6b7280 !important;
+  }
+
+  .job-header {
+    margin-bottom: 1mm !important;
+  }
+
+  .job-subtitle {
+    font-size: 11px !important;
+    color: #4b5563 !important;
+    margin: 2mm 0 1mm !important;
+  }
+
+  /* 子彈點行為：更窄間距，適合 A4 */
+  ul {
+    padding-left: 0 !important;
+    margin: 0 !important;
+  }
+
+  .bullet {
+    align-items: flex-start !important;
+    gap: 5px !important;
+    margin-bottom: 1.2mm !important;
+  }
+
+  .bullet .dot {
+    margin-top: 4px !important;
+    width: 3px !important;
+    height: 3px !important;
+    background: #2563eb !important;
+  }
+
+  /* Skill 標籤改成純文字列，避免太花 */
+  .skill-list {
+    display: block !important;
+  }
+
+  .skill-list span {
+    display: inline-block !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 6px 0 0 !important;
+    font-size: 11.5px !important;
+    color: #374151 !important;
+  }
+
+  .skill-group-title {
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    color: #111827 !important;
+    margin: 0 0 1mm !important;
+  }
+
+  .skill-group {
+    margin-bottom: 3mm !important;
+  }
+
+  /* 避免奇怪斷頁：一個 job / section 儘量在同一頁 */
+  section,
+  .job {
+    page-break-inside: avoid;
+  }
+
+  footer {
+    margin-top: 8mm !important;
+    text-align: center !important;
+    font-size: 10.5px !important;
+    color: #6b7280 !important;
+  }
+}
+
+/* ======== Fixed Profile Photo (No Upload) ======== */
+.photo-block {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.photo-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 列印 PDF 時：維持照片呈現 */
+@media print {
+  .photo-block {
+    border: none !important;
+  }
+}
+
+.page-break {
+  page-break-before: always;
+}
+
