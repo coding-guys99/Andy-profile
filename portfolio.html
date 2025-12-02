@@ -11,205 +11,518 @@
     <header class="pf-header">
       <div>
         <div class="pf-title">ANDY WONG</div>
-        <div class="pf-sub">Execution Record · Virtual Studio & Live Production</div>
+        <div
+          class="pf-sub i18n"
+          data-zh="執行紀錄 · 虛擬攝影棚與直播製作"
+          data-en="Execution Record · Virtual Studio & Live Production"
+        ></div>
       </div>
 
       <div class="pf-header-right">
         <div class="pf-links">
-          <a href="index.html" class="pf-link">履歷 Resume</a>
-          <a href="portfolio.html" class="pf-link pf-link-active">執行紀錄 Portfolio</a>
+          <a href="index.html" class="pf-link i18n"
+             data-zh="履歷 Resume"
+             data-en="Resume">
+          </a>
+          <a href="portfolio.html" class="pf-link pf-link-active i18n"
+             data-zh="執行紀錄 Portfolio"
+             data-en="Portfolio">
+          </a>
         </div>
-    
-     <!-- 手機漢堡按鈕 -->
-    <button id="menuToggle" class="menu-toggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-        
+
+        <!-- 手機漢堡按鈕 -->
+        <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
-    
+
     <!-- 手機右側滑出的選單 -->
-<nav id="mobileNav" class="mobile-nav">
-  <a href="index.html" class="nav-item">履歷 Resume</a>
-  <a href="portfolio.html" class="nav-item">執行紀錄 Portfolio</a>
-  <button type="button" id="navLangToggle" class="nav-item nav-btn">切換語言</button>
-  <!--<button type="button" id="navDownload" class="nav-item nav-btn">下載 PDF</button>-->
-</nav>
+    <nav id="mobileNav" class="mobile-nav">
+      <a href="index.html" class="nav-item i18n"
+         data-zh="履歷 Resume"
+         data-en="Resume"></a>
+      <a href="portfolio.html" class="nav-item i18n"
+         data-zh="執行紀錄 Portfolio"
+         data-en="Portfolio"></a>
+      <button type="button" id="navLangToggle" class="nav-item nav-btn">
+        <!-- 文字由 JS 控制 -->
+      </button>
+      <!-- 如果未來要在這頁也下載 PDF 可以打開這個 -->
+      <!--
+      <button type="button" id="navDownload" class="nav-item nav-btn i18n"
+              data-zh="下載 PDF"
+              data-en="Download PDF"></button>
+      -->
+    </nav>
+
+    <!-- 如果你有用 backdrop，記得加上這個（跟 index.html 一樣） -->
+    <div id="mobileNavBackdrop" class="mobile-nav-backdrop"></div>
 
     <div class="portfolio-layout">
       <!-- 左側目錄 -->
       <aside class="pf-sidebar">
-        <div class="pf-sidebar-title">Projects</div>
+        <div class="pf-sidebar-title i18n"
+             data-zh="專案 Projects"
+             data-en="Projects">
+        </div>
         <ul class="pf-nav">
-          <li><button data-pf-target="proj-1" class="pf-nav-item active">1. 蘭燈空間</button></li>
-          <li><button data-pf-target="proj-2" class="pf-nav-item">2. 華人衛視電視台</button></li>
-          <li><button data-pf-target="proj-3" class="pf-nav-item">3. BIRTV 北京展位</button></li>
-          <li><button data-pf-target="proj-4" class="pf-nav-item">4. 泰國大學虛擬棚</button></li>
-          <li><button data-pf-target="proj-5" class="pf-nav-item">5. 體壇觀測站</button></li>
-          <li><button data-pf-target="proj-6" class="pf-nav-item">6. 國立成功大學</button></li>
-          <li><button data-pf-target="proj-7" class="pf-nav-item">7. 柬埔寨展覽</button></li>
-          <li><button data-pf-target="proj-8" class="pf-nav-item">8. 公司官網</button></li>
+          <li>
+            <button data-pf-target="proj-1" class="pf-nav-item active i18n"
+                    data-zh="1. 蘭燈空間"
+                    data-en="1. Landeng Studio">
+            </button>
+          </li>
+          <li>
+            <button data-pf-target="proj-2" class="pf-nav-item i18n"
+                    data-zh="2. 華人衛視電視台"
+                    data-en="2. Chinese TV Station">
+            </button>
+          </li>
+          <li>
+            <button data-pf-target="proj-3" class="pf-nav-item i18n"
+                    data-zh="3. BIRTV 北京展位"
+                    data-en="3. BIRTV Beijing Booth">
+            </button>
+          </li>
+          <li>
+            <button data-pf-target="proj-4" class="pf-nav-item i18n"
+                    data-zh="4. 泰國大學虛擬棚"
+                    data-en="4. Thai University Virtual Studio">
+            </button>
+          </li>
+          <li>
+            <button data-pf-target="proj-5" class="pf-nav-item i18n"
+                    data-zh="5. 體壇觀測站"
+                    data-en="5. Sports Observation Show">
+            </button>
+          </li>
+          <li>
+            <button data-pf-target="proj-6" class="pf-nav-item i18n"
+                    data-zh="6. 國立成功大學"
+                    data-en="6. National Cheng Kung University">
+            </button>
+          </li>
+          <li>
+            <button data-pf-target="proj-7" class="pf-nav-item i18n"
+                    data-zh="7. 柬埔寨展覽"
+                    data-en="7. Cambodia Expo">
+            </button>
+          </li>
+          <li>
+            <button data-pf-target="proj-8" class="pf-nav-item i18n"
+                    data-zh="8. 公司官網"
+                    data-en="8. Company Website">
+            </button>
+          </li>
         </ul>
       </aside>
 
       <!-- 右側內容 -->
       <section class="pf-content">
-        <!-- 每個專案一段，id 對應 sidebar 的 data-pf-target -->
+        <!-- proj-1 -->
         <article id="proj-1" class="pf-section">
-          <h2>1. 蘭燈空間｜0–1 虛擬攝影棚建置</h2>
-          <p><strong>Client：</strong>蘭燈空間　｜　<strong>Role：</strong>技術整合工程師　｜　<strong>Region：</strong>台灣</p>
-          <p><strong>Scope：</strong>虛擬攝影棚系統 0–1 建置</p>
-          <h3>Responsibilities</h3>
+          <h2 class="i18n"
+              data-zh="1. 蘭燈空間｜0–1 虛擬攝影棚建置"
+              data-en="1. Landeng Studio · 0–1 Virtual Studio Setup">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：蘭燈空間　｜　Role：技術整合工程師　｜　Region：台灣"
+             data-en="Client: Landeng Studio · Role: Technical Integration Engineer · Region: Taiwan">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：虛擬攝影棚系統 0–1 建置"
+             data-en="Scope: 0–1 virtual studio system setup">
+          </p>
+          <h3 class="i18n"
+              data-zh="Responsibilities"
+              data-en="Responsibilities">
+          </h3>
           <ul>
-            <li>規劃虛擬攝影棚整體技術架構（攝影、燈光、NDI、Tracking）。</li>
-            <li>安裝並整合 U-Caster / U-Meta V 系統。</li>
-            <li>設計棚內實際拍攝流程並測試穩定度。</li>
-            <li>提供使用者操作訓練與設備說明。</li>
-            <li>建立基本 Troubleshooting 流程。</li>
+            <li class="i18n"
+                data-zh="規劃虛擬攝影棚整體技術架構（攝影、燈光、NDI、Tracking）。"
+                data-en="Planned the overall virtual studio technical architecture (cameras, lighting, NDI, tracking).">
+            </li>
+            <li class="i18n"
+                data-zh="安裝並整合 U-Caster / U-Meta V 系統。"
+                data-en="Installed and integrated U-Caster / U-Meta V systems.">
+            </li>
+            <li class="i18n"
+                data-zh="設計棚內實際拍攝流程並測試穩定度。"
+                data-en="Designed in-studio shooting workflows and tested system stability.">
+            </li>
+            <li class="i18n"
+                data-zh="提供使用者操作訓練與設備說明。"
+                data-en="Provided user operation training and equipment guidance.">
+            </li>
+            <li class="i18n"
+                data-zh="建立基本 Troubleshooting 流程。"
+                data-en="Established basic troubleshooting procedures.">
+            </li>
           </ul>
-          <h3>Outcome</h3>
+          <h3 class="i18n"
+              data-zh="Outcome"
+              data-en="Outcome">
+          </h3>
           <ul>
-            <li>從無到有完成虛擬棚搭建，客戶可獨立完成拍攝。</li>
-            <li>拍攝流程明確，內容產出效率提升。</li>
-            <li>系統運行穩定，獲得客戶正向回饋。</li>
+            <li class="i18n"
+                data-zh="從無到有完成虛擬棚搭建，客戶可獨立完成拍攝。"
+                data-en="Delivered a full 0–1 virtual studio; client can now operate shoots independently.">
+            </li>
+            <li class="i18n"
+                data-zh="拍攝流程明確，內容產出效率提升。"
+                data-en="Clarified the shooting workflow and improved content production efficiency.">
+            </li>
+            <li class="i18n"
+                data-zh="系統運行穩定，獲得客戶正向回饋。"
+                data-en="System runs stably and received positive feedback from the client.">
+            </li>
           </ul>
         </article>
 
+        <!-- proj-2 -->
         <article id="proj-2" class="pf-section">
-          <h2>2. 華人衛視電視台｜0–1 虛擬棚建置</h2>
-          <p><strong>Client：</strong>華人衛視電視台　｜　<strong>Role：</strong>工程整合　｜　<strong>Region：</strong>台灣</p>
-          <p><strong>Scope：</strong>虛擬攝影棚導入與節目拍攝流程建立</p>
-          <h3>Responsibilities</h3>
+          <h2 class="i18n"
+              data-zh="2. 華人衛視電視台｜0–1 虛擬棚建置"
+              data-en="2. Chinese TV Station · 0–1 Virtual Studio Setup">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：華人衛視電視台　｜　Role：工程整合　｜　Region：台灣"
+             data-en="Client: Chinese TV Station · Role: System Integration Engineer · Region: Taiwan">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：虛擬攝影棚導入與節目拍攝流程建立"
+             data-en="Scope: Virtual studio deployment and live program workflow setup">
+          </p>
+          <h3 class="i18n"
+              data-zh="Responsibilities"
+              data-en="Responsibilities">
+          </h3>
           <ul>
-            <li>規劃台內虛擬拍攝流程（多機、導播、Tracking）。</li>
-            <li>整合既有 SDI Routing / 混音台等硬體設備。</li>
-            <li>建立節目錄影動線與場景切換邏輯。</li>
-            <li>提供導播與攝影團隊操作訓練。</li>
+            <li class="i18n"
+                data-zh="規劃台內虛擬拍攝流程（多機、導播、Tracking）。"
+                data-en="Planned in-house virtual production workflow (multi-camera, directing, tracking).">
+            </li>
+            <li class="i18n"
+                data-zh="整合既有 SDI Routing / 混音台等硬體設備。"
+                data-en="Integrated existing SDI routing, audio mixer and other broadcast hardware.">
+            </li>
+            <li class="i18n"
+                data-zh="建立節目錄影動線與場景切換邏輯。"
+                data-en="Designed program recording flow and scene-switching logic.">
+            </li>
+            <li class="i18n"
+                data-zh="提供導播與攝影團隊操作訓練。"
+                data-en="Trained directing and camera teams on new workflows.">
+            </li>
           </ul>
-          <h3>Outcome</h3>
+          <h3 class="i18n"
+              data-zh="Outcome"
+              data-en="Outcome">
+          </h3>
           <ul>
-            <li>虛擬棚系統與既有流程順利整合。</li>
-            <li>節目拍攝流程更穩定，製作效率提升。</li>
-          </ul>
-        </article>
-        
-                <article id="proj-3" class="pf-section">
-          <h2>3. 中國北京 BIRTV 展｜展位 0–1 系統整合</h2>
-          <p><strong>Client：</strong>中國區經銷商　｜　<strong>Role：</strong>展會技術展示工程師　｜　<strong>Region：</strong>中國北京</p>
-          <p><strong>Scope：</strong>BIRTV 國際廣電展之虛擬棚展位 0–1 整合與 Demo</p>
-          <h3>Responsibilities</h3>
-          <ul>
-            <li>協助規劃虛擬棚 Demo 展位架構與動線（攝影、監看、互動區）。</li>
-            <li>展前完成 U-Caster / U-Meta V 等系統建置與整合測試。</li>
-            <li>現場進行設備走線、NDI 設定與虛擬場景調整。</li>
-            <li>與經銷商共同設計 Demo 流程，負責向來訪客戶進行技術說明。</li>
-          </ul>
-          <h3>Outcome</h3>
-          <ul>
-            <li>展期間虛擬棚 Demo 運行穩定，能連續應對高流量參觀人潮。</li>
-            <li>協助經銷商與多家教育與媒體客戶建立初步合作機會。</li>
-            <li>提升品牌在中國廣電市場的技術形象與能見度。</li>
+            <li class="i18n"
+                data-zh="虛擬棚系統與既有流程順利整合。"
+                data-en="Virtual studio system integrated smoothly with the existing pipeline.">
+            </li>
+            <li class="i18n"
+                data-zh="節目拍攝流程更穩定，製作效率提升。"
+                data-en="Program production became more stable and efficient.">
+            </li>
           </ul>
         </article>
 
+        <!-- proj-3 -->
+        <article id="proj-3" class="pf-section">
+          <h2 class="i18n"
+              data-zh="3. 中國北京 BIRTV 展｜展位 0–1 系統整合"
+              data-en="3. BIRTV Beijing · 0–1 Booth System Integration">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：中國區經銷商　｜　Role：展會技術展示工程師　｜　Region：中國北京"
+             data-en="Client: China Distributor · Role: Trade-show Technical Demo Engineer · Region: Beijing, China">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：BIRTV 國際廣電展之虛擬棚展位 0–1 整合與 Demo"
+             data-en="Scope: 0–1 integration and demo of virtual studio booth at BIRTV broadcast show">
+          </p>
+          <h3 class="i18n" data-zh="Responsibilities" data-en="Responsibilities"></h3>
+          <ul>
+            <li class="i18n"
+                data-zh="協助規劃虛擬棚 Demo 展位架構與動線（攝影、監看、互動區）。"
+                data-en="Helped design the virtual studio demo booth layout and flow (cameras, monitoring, interaction area).">
+            </li>
+            <li class="i18n"
+                data-zh="展前完成 U-Caster / U-Meta V 等系統建置與整合測試。"
+                data-en="Set up and tested U-Caster / U-Meta V systems before the show.">
+            </li>
+            <li class="i18n"
+                data-zh="現場進行設備走線、NDI 設定與虛擬場景調整。"
+                data-en="Handled cabling, NDI configuration and virtual scene tuning on-site.">
+            </li>
+            <li class="i18n"
+                data-zh="與經銷商共同設計 Demo 流程，負責向來訪客戶進行技術說明。"
+                data-en="Co-designed demo flows with distributor and provided technical explanations to visitors.">
+            </li>
+          </ul>
+          <h3 class="i18n" data-zh="Outcome" data-en="Outcome"></h3>
+          <ul>
+            <li class="i18n"
+                data-zh="展期間虛擬棚 Demo 運行穩定，能連續應對高流量參觀人潮。"
+                data-en="Virtual studio demo ran stably throughout the event, handling high visitor traffic.">
+            </li>
+            <li class="i18n"
+                data-zh="協助經銷商與多家教育與媒體客戶建立初步合作機會。"
+                data-en="Helped the distributor build initial relationships with multiple education and media clients.">
+            </li>
+            <li class="i18n"
+                data-zh="提升品牌在中國廣電市場的技術形象與能見度。"
+                data-en="Strengthened brand perception and visibility in the Chinese broadcast market.">
+            </li>
+          </ul>
+        </article>
+
+        <!-- proj-4 -->
         <article id="proj-4" class="pf-section">
-          <h2>4. 泰國大學｜虛擬攝影棚設備教學</h2>
-          <p><strong>Client：</strong>泰國某大學（與當地經銷合作）　｜　<strong>Role：</strong>技術講師　｜　<strong>Region：</strong>泰國</p>
-          <p><strong>Scope：</strong>虛擬攝影棚系統操作教學與實作訓練</p>
-          <h3>Responsibilities</h3>
+          <h2 class="i18n"
+              data-zh="4. 泰國大學｜虛擬攝影棚設備教學"
+              data-en="4. Thai University · Virtual Studio Training">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：泰國某大學（與當地經銷合作）　｜　Role：技術講師　｜　Region：泰國"
+             data-en="Client: University in Thailand (with local distributor) · Role: Technical Trainer · Region: Thailand">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：虛擬攝影棚系統操作教學與實作訓練"
+             data-en="Scope: Virtual studio system operation training and hands-on sessions">
+          </p>
+          <h3 class="i18n" data-zh="Responsibilities" data-en="Responsibilities"></h3>
           <ul>
-            <li>示範完整虛擬拍攝流程，包含構圖、Tracking 與燈光配置示意。</li>
-            <li>教授 U-Caster 系統操作與虛擬場景切換方式。</li>
-            <li>帶領老師與學生實際上機操作，從基本拍攝到錄製完整段落。</li>
-            <li>協助學校評估未來在教學、直播或課程錄製中的應用情境。</li>
+            <li class="i18n"
+                data-zh="示範完整虛擬拍攝流程，包含構圖、Tracking 與燈光配置示意。"
+                data-en="Demonstrated end-to-end virtual production workflow, including framing, tracking and lighting concepts.">
+            </li>
+            <li class="i18n"
+                data-zh="教授 U-Caster 系統操作與虛擬場景切換方式。"
+                data-en="Trained staff and students on U-Caster operations and scene switching.">
+            </li>
+            <li class="i18n"
+                data-zh="帶領老師與學生實際上機操作，從基本拍攝到錄製完整段落。"
+                data-en="Guided lecturers and students through hands-on shooting and recording full segments.">
+            </li>
+            <li class="i18n"
+                data-zh="協助學校評估未來在教學、直播或課程錄製中的應用情境。"
+                data-en="Helped the university evaluate use cases for teaching, livestreaming and course recording.">
+            </li>
           </ul>
-          <h3>Outcome</h3>
+          <h3 class="i18n" data-zh="Outcome" data-en="Outcome"></h3>
           <ul>
-            <li>老師與學生能獨立完成基本虛擬棚拍攝與錄製。</li>
-            <li>學校內部對虛擬攝影棚系統的可行性與應用有清晰認知。</li>
-            <li>為後續校方設備投資與課程規劃提供技術參考。</li>
+            <li class="i18n"
+                data-zh="老師與學生能獨立完成基本虛擬棚拍攝與錄製。"
+                data-en="Teachers and students can now complete basic virtual studio shoots independently.">
+            </li>
+            <li class="i18n"
+                data-zh="學校內部對虛擬攝影棚系統的可行性與應用有清晰認知。"
+                data-en="The school has a clear understanding of virtual studio feasibility and applications.">
+            </li>
+            <li class="i18n"
+                data-zh="為後續校方設備投資與課程規劃提供技術參考。"
+                data-en="Provided a technical reference for future equipment investment and curriculum planning.">
+            </li>
           </ul>
         </article>
 
+        <!-- proj-5 -->
         <article id="proj-5" class="pf-section">
-          <h2>5. 體壇觀測站｜節目製作與系統設定</h2>
-          <p><strong>Client：</strong>體壇觀測站　｜　<strong>Role：</strong>工程師／導播支援　｜　<strong>Region：</strong>台灣</p>
-          <p><strong>Scope：</strong>體育節目之拍攝技術支援與虛擬棚整合</p>
-          <h3>Responsibilities</h3>
+          <h2 class="i18n"
+              data-zh="5. 體壇觀測站｜節目製作與系統設定"
+              data-en="5. Sports Observation Show · Production & System Setup">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：體壇觀測站　｜　Role：工程師／導播支援　｜　Region：台灣"
+             data-en="Client: Sports Observation Show · Role: Engineer / Directing Support · Region: Taiwan">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：體育節目之拍攝技術支援與虛擬棚整合"
+             data-en="Scope: Technical support and virtual studio integration for a sports program">
+          </p>
+          <h3 class="i18n" data-zh="Responsibilities" data-en="Responsibilities"></h3>
           <ul>
-            <li>協助節目錄影多機拍攝與導播切換設定。</li>
-            <li>整合虛擬背景與 U-Caster 場景切換，確保畫面一致性。</li>
-            <li>調整燈光與攝影機參數，以符合節目視覺與上稿需求。</li>
-            <li>建立錄影流程與檔案管理方式，方便後期剪輯與存檔。</li>
+            <li class="i18n"
+                data-zh="協助節目錄影多機拍攝與導播切換設定。"
+                data-en="Supported multi-camera recording and directing switcher setup.">
+            </li>
+            <li class="i18n"
+                data-zh="整合虛擬背景與 U-Caster 場景切換，確保畫面一致性。"
+                data-en="Integrated virtual backgrounds with U-Caster scene switching to maintain visual consistency.">
+            </li>
+            <li class="i18n"
+                data-zh="調整燈光與攝影機參數，以符合節目視覺與上稿需求。"
+                data-en="Adjusted lighting and camera parameters to match visual and broadcast requirements.">
+            </li>
+            <li class="i18n"
+                data-zh="建立錄影流程與檔案管理方式，方便後期剪輯與存檔。"
+                data-en="Defined recording workflow and file management to support post-production.">
+            </li>
           </ul>
-          <h3>Outcome</h3>
+          <h3 class="i18n" data-zh="Outcome" data-en="Outcome"></h3>
           <ul>
-            <li>節目錄影流程順暢，現場技術問題明顯減少。</li>
-            <li>最終畫面穩定、構圖一致，利於後期製作與播出。</li>
+            <li class="i18n"
+                data-zh="節目錄影流程順暢，現場技術問題明顯減少。"
+                data-en="Recording sessions ran smoothly with fewer on-site technical issues.">
+            </li>
+            <li class="i18n"
+                data-zh="最終畫面穩定、構圖一致，利於後期製作與播出。"
+                data-en="Final footage was stable and consistent, supporting clean post-production and broadcast.">
+            </li>
           </ul>
         </article>
 
+        <!-- proj-6 -->
         <article id="proj-6" class="pf-section">
-          <h2>6. 國立成功大學｜虛擬棚體驗活動</h2>
-          <p><strong>Client：</strong>國立成功大學　｜　<strong>Role：</strong>現場技術支援　｜　<strong>Region：</strong>台灣</p>
-          <p><strong>Scope：</strong>虛擬攝影棚體驗活動與現場示範</p>
-          <h3>Responsibilities</h3>
+          <h2 class="i18n"
+              data-zh="6. 國立成功大學｜虛擬棚體驗活動"
+              data-en="6. National Cheng Kung University · Virtual Studio Experience">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：國立成功大學　｜　Role：現場技術支援　｜　Region：台灣"
+             data-en="Client: National Cheng Kung University · Role: On-site Technical Support · Region: Taiwan">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：虛擬攝影棚體驗活動與現場示範"
+             data-en="Scope: Virtual studio experience event and live demo">
+          </p>
+          <h3 class="i18n" data-zh="Responsibilities" data-en="Responsibilities"></h3>
           <ul>
-            <li>攜帶並架設虛擬棚相關設備於校園現場。</li>
-            <li>示範虛擬棚拍攝流程、Tracking 操作與燈光配置概念。</li>
-            <li>帶領學生實際操作，完成個人短片或簡易節目拍攝。</li>
-            <li>回答師生關於虛擬製播與職涯方向的技術問題與應用想像。</li>
+            <li class="i18n"
+                data-zh="攜帶並架設虛擬棚相關設備於校園現場。"
+                data-en="Transported and set up virtual studio equipment on campus.">
+            </li>
+            <li class="i18n"
+                data-zh="示範虛擬棚拍攝流程、Tracking 操作與燈光配置概念。"
+                data-en="Demonstrated virtual studio workflow, tracking operation and lighting concepts.">
+            </li>
+            <li class="i18n"
+                data-zh="帶領學生實際操作，完成個人短片或簡易節目拍攝。"
+                data-en="Guided students through hands-on operations to record individual clips or simple shows.">
+            </li>
+            <li class="i18n"
+                data-zh="回答師生關於虛擬製播與職涯方向的技術問題與應用想像。"
+                data-en="Answered questions on virtual production technology and related career paths.">
+            </li>
           </ul>
-          <h3>Outcome</h3>
+          <h3 class="i18n" data-zh="Outcome" data-en="Outcome"></h3>
           <ul>
-            <li>多位學生完成個人短片錄製，實際體驗虛擬棚拍攝流程。</li>
-            <li>校方對虛擬棚在教學、Demo 或活動中的應用有更具體的想法。</li>
+            <li class="i18n"
+                data-zh="多位學生完成個人短片錄製，實際體驗虛擬棚拍攝流程。"
+                data-en="Multiple students recorded their own clips and experienced the virtual studio process.">
+            </li>
+            <li class="i18n"
+                data-zh="校方對虛擬棚在教學、Demo 或活動中的應用有更具體的想法。"
+                data-en="The university gained concrete ideas on using virtual studios for teaching, demos and events.">
+            </li>
           </ul>
         </article>
 
+        <!-- proj-7 -->
         <article id="proj-7" class="pf-section">
-          <h2>7. 柬埔寨展覽｜海外市場開發支援</h2>
-          <p><strong>Client：</strong>柬埔寨當地經銷商　｜　<strong>Role：</strong>技術展示與市場支援　｜　<strong>Region：</strong>柬埔寨</p>
-          <p><strong>Scope：</strong>虛擬棚系統展會展示與在地市場開發支援</p>
-          <h3>Responsibilities</h3>
+          <h2 class="i18n"
+              data-zh="7. 柬埔寨展覽｜海外市場開發支援"
+              data-en="7. Cambodia Expo · Overseas Market Support">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：柬埔寨當地經銷商　｜　Role：技術展示與市場支援　｜　Region：柬埔寨"
+             data-en="Client: Local Distributor in Cambodia · Role: Technical Demo & Market Support · Region: Cambodia">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：虛擬棚系統展會展示與在地市場開發支援"
+             data-en="Scope: Virtual studio demo at trade show and local market development support">
+          </p>
+          <h3 class="i18n" data-zh="Responsibilities" data-en="Responsibilities"></h3>
           <ul>
-            <li>展會現場建置虛擬棚 Demo 系統並完成測試。</li>
-            <li>協助經銷商向當地教育與媒體客戶進行產品 Demo 與技術說明。</li>
-            <li>說明虛擬棚在課程錄製、新聞、節目上的應用情境。</li>
-            <li>蒐集當地客戶需求與市場回饋，提供給公司與經銷商作為後續策略參考。</li>
+            <li class="i18n"
+                data-zh="展會現場建置虛擬棚 Demo 系統並完成測試。"
+                data-en="Deployed and tested virtual studio demo system at the expo.">
+            </li>
+            <li class="i18n"
+                data-zh="協助經銷商向當地教育與媒體客戶進行產品 Demo 與技術說明。"
+                data-en="Supported distributor in delivering product demos and technical explanations to local education and media clients.">
+            </li>
+            <li class="i18n"
+                data-zh="說明虛擬棚在課程錄製、新聞、節目上的應用情境。"
+                data-en="Explained use cases of virtual studios for course recording, news and program production.">
+            </li>
+            <li class="i18n"
+                data-zh="蒐集當地客戶需求與市場回饋，提供給公司與經銷商作為後續策略參考。"
+                data-en="Collected local customer needs and feedback to support future strategy for the company and distributor.">
+            </li>
           </ul>
-          <h3>Outcome</h3>
+          <h3 class="i18n" data-zh="Outcome" data-en="Outcome"></h3>
           <ul>
-            <li>協助經銷商在當地建立虛擬攝影棚解決方案的專業形象。</li>
-            <li>為後續教育與廣電市場專案鋪路，增加品牌在東南亞的能見度。</li>
+            <li class="i18n"
+                data-zh="協助經銷商在當地建立虛擬攝影棚解決方案的專業形象。"
+                data-en="Helped the distributor build a professional image around virtual studio solutions in the local market.">
+            </li>
+            <li class="i18n"
+                data-zh="為後續教育與廣電市場專案鋪路，增加品牌在東南亞的能見度。"
+                data-en="Paved the way for future education and broadcast projects, increasing brand visibility in Southeast Asia.">
+            </li>
           </ul>
         </article>
 
+        <!-- proj-8 -->
         <article id="proj-8" class="pf-section">
-          <h2>8. 公司官網｜Wix 網站建置</h2>
-          <p><strong>Client：</strong>公司內部　｜　<strong>Role：</strong>網站負責人　｜　<strong>Region：</strong>台灣</p>
-          <p><strong>Scope：</strong>公司官網 0–1 架設與內容結構規劃</p>
-          <h3>Responsibilities</h3>
+          <h2 class="i18n"
+              data-zh="8. 公司官網｜Wix 網站建置"
+              data-en="8. Company Website · Wix Build">
+          </h2>
+          <p class="i18n"
+             data-zh="Client：公司內部　｜　Role：網站負責人　｜　Region：台灣"
+             data-en="Client: Internal · Role: Website Owner · Region: Taiwan">
+          </p>
+          <p class="i18n"
+             data-zh="Scope：公司官網 0–1 架設與內容結構規劃"
+             data-en="Scope: 0–1 company website build and content structure planning using Wix">
+          </p>
+          <h3 class="i18n" data-zh="Responsibilities" data-en="Responsibilities"></h3>
           <ul>
-            <li>使用 Wix 建立公司官網架構與頁面階層。</li>
-            <li>規劃產品頁、案例展示與聯絡資訊等版面配置。</li>
-            <li>整理中英文版內容，以方便海外經銷與客戶瀏覽。</li>
-            <li>協調內部同事提供文字與圖片素材，確保資訊一致性。</li>
+            <li class="i18n"
+                data-zh="使用 Wix 建立公司官網架構與頁面階層。"
+                data-en="Built the company website architecture and page hierarchy with Wix.">
+            </li>
+            <li class="i18n"
+                data-zh="規劃產品頁、案例展示與聯絡資訊等版面配置。"
+                data-en="Planned layouts for product pages, case studies and contact information.">
+            </li>
+            <li class="i18n"
+                data-zh="整理中英文版內容，以方便海外經銷與客戶瀏覽。"
+                data-en="Organised Chinese and English content for overseas distributors and clients.">
+            </li>
+            <li class="i18n"
+                data-zh="協調內部同事提供文字與圖片素材，確保資訊一致性。"
+                data-en="Coordinated with colleagues to gather copy and visuals and keep information consistent.">
+            </li>
           </ul>
-          <h3>Outcome</h3>
+          <h3 class="i18n" data-zh="Outcome" data-en="Outcome"></h3>
           <ul>
-            <li>官網資訊結構清楚，利於業務與行銷對外介紹產品。</li>
-            <li>國外客戶能透過官網快速了解產品與方案，增加初步洽談效率。</li>
+            <li class="i18n"
+                data-zh="官網資訊結構清楚，利於業務與行銷對外介紹產品。"
+                data-en="Delivered a clear site structure that supports sales and marketing presentations.">
+            </li>
+            <li class="i18n"
+                data-zh="國外客戶能透過官網快速了解產品與方案，增加初步洽談效率。"
+                data-en="Overseas clients can quickly understand products and solutions via the website, improving initial contact efficiency.">
+            </li>
           </ul>
         </article>
-
-        <!-- 下面 3–8 依照剛剛 Word 版內容往下排，我就不贅述全部文字了，你可以照樣式複製填滿 -->
-        <!-- proj-3 ~ proj-8 用同樣結構 h2/p/h3/ul ... -->
       </section>
     </div>
 
     <footer>
-      Execution Record · Andy Wong
+      <span class="i18n"
+            data-zh="Execution Record · Andy Wong"
+            data-en="Execution Record · Andy Wong">
+      </span>
     </footer>
   </main>
 
