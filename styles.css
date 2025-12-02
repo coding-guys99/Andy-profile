@@ -555,3 +555,199 @@ footer {
   page-break-before: always;
 }
 
+/* ===== Portfolio layout ===== */
+.portfolio-page .container {
+  padding: 24px 26px 26px;
+}
+
+.pf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.pf-title {
+  font-size: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pf-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.pf-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pf-links {
+  display: flex;
+  gap: 10px;
+}
+
+.pf-link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.pf-link-active {
+  color: var(--accent);
+}
+
+/* 左側目錄 + 右側內容 */
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.pf-sidebar {
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+}
+
+.pf-sidebar-title {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.pf-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pf-nav-item {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pf-nav-item.active {
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+.pf-content {
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.pf-section + .pf-section {
+  margin-top: 18px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(31, 41, 55, 0.7);
+}
+
+.pf-section h2 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.pf-section h3 {
+  font-size: 13px;
+  margin: 8px 0 4px;
+  color: var(--muted);
+}
+
+/* 手機版：sidebar 改成橫向捲動 */
+@media (max-width: 800px) {
+  .portfolio-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pf-sidebar {
+    position: static;
+    margin-bottom: 8px;
+  }
+
+  .pf-nav {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .pf-nav-item {
+    white-space: nowrap;
+  }
+}
+
+/* ===== 漢堡選單（Resume + Portfolio 共用） ===== */
+.menu-toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.85);
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  margin-bottom: 4px;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 56px;
+  right: 20px;
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 8px 0;
+  min-width: 160px;
+  z-index: 20;
+}
+
+.mobile-nav .nav-item {
+  display: block;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.mobile-nav .nav-item:hover {
+  background: rgba(30, 64, 175, 0.6);
+}
+
+/* 手機顯示漢堡，桌機顯示 header 右側連結 */
+@media (max-width: 800px) {
+  .pf-links,
+  .btn-row {
+    display: none;
+  }
+  .menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
