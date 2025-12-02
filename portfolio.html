@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>Andy Wong｜執行紀錄 Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="portfolio-page">
+  <main class="container">
+    <header class="pf-header">
+      <div>
+        <div class="pf-title">ANDY WONG</div>
+        <div class="pf-sub">Execution Record · Virtual Studio & Live Production</div>
+      </div>
+
+      <div class="pf-header-right">
+        <div class="pf-links">
+          <a href="index.html" class="pf-link">履歷 Resume</a>
+          <a href="portfolio.html" class="pf-link pf-link-active">執行紀錄 Portfolio</a>
+        </div>
+
+        <!-- 手機漢堡選單（和履歷共用同一套 JS / CSS） -->
+        <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="mobileNav" class="mobile-nav">
+          <a href="index.html" class="nav-item">履歷 Resume</a>
+          <a href="portfolio.html" class="nav-item">執行紀錄 Portfolio</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="portfolio-layout">
+      <!-- 左側目錄 -->
+      <aside class="pf-sidebar">
+        <div class="pf-sidebar-title">Projects</div>
+        <ul class="pf-nav">
+          <li><button data-pf-target="proj-1" class="pf-nav-item active">1. 蘭燈空間</button></li>
+          <li><button data-pf-target="proj-2" class="pf-nav-item">2. 華人衛視電視台</button></li>
+          <li><button data-pf-target="proj-3" class="pf-nav-item">3. BIRTV 北京展位</button></li>
+          <li><button data-pf-target="proj-4" class="pf-nav-item">4. 泰國大學虛擬棚</button></li>
+          <li><button data-pf-target="proj-5" class="pf-nav-item">5. 體壇觀測站</button></li>
+          <li><button data-pf-target="proj-6" class="pf-nav-item">6. 國立成功大學</button></li>
+          <li><button data-pf-target="proj-7" class="pf-nav-item">7. 柬埔寨展覽</button></li>
+          <li><button data-pf-target="proj-8" class="pf-nav-item">8. 公司官網</button></li>
+        </ul>
+      </aside>
+
+      <!-- 右側內容 -->
+      <section class="pf-content">
+        <!-- 每個專案一段，id 對應 sidebar 的 data-pf-target -->
+        <article id="proj-1" class="pf-section">
+          <h2>1. 蘭燈空間｜0–1 虛擬攝影棚建置</h2>
+          <p><strong>Client：</strong>蘭燈空間　｜　<strong>Role：</strong>技術整合工程師　｜　<strong>Region：</strong>台灣</p>
+          <p><strong>Scope：</strong>虛擬攝影棚系統 0–1 建置</p>
+          <h3>Responsibilities</h3>
+          <ul>
+            <li>規劃虛擬攝影棚整體技術架構（攝影、燈光、NDI、Tracking）。</li>
+            <li>安裝並整合 U-Caster / U-Meta V 系統。</li>
+            <li>設計棚內實際拍攝流程並測試穩定度。</li>
+            <li>提供使用者操作訓練與設備說明。</li>
+            <li>建立基本 Troubleshooting 流程。</li>
+          </ul>
+          <h3>Outcome</h3>
+          <ul>
+            <li>從無到有完成虛擬棚搭建，客戶可獨立完成拍攝。</li>
+            <li>拍攝流程明確，內容產出效率提升。</li>
+            <li>系統運行穩定，獲得客戶正向回饋。</li>
+          </ul>
+        </article>
+
+        <article id="proj-2" class="pf-section">
+          <h2>2. 華人衛視電視台｜0–1 虛擬棚建置</h2>
+          <p><strong>Client：</strong>華人衛視電視台　｜　<strong>Role：</strong>工程整合　｜　<strong>Region：</strong>台灣</p>
+          <p><strong>Scope：</strong>虛擬攝影棚導入與節目拍攝流程建立</p>
+          <h3>Responsibilities</h3>
+          <ul>
+            <li>規劃台內虛擬拍攝流程（多機、導播、Tracking）。</li>
+            <li>整合既有 SDI Routing / 混音台等硬體設備。</li>
+            <li>建立節目錄影動線與場景切換邏輯。</li>
+            <li>提供導播與攝影團隊操作訓練。</li>
+          </ul>
+          <h3>Outcome</h3>
+          <ul>
+            <li>虛擬棚系統與既有流程順利整合。</li>
+            <li>節目拍攝流程更穩定，製作效率提升。</li>
+          </ul>
+        </article>
+
+        <!-- 下面 3–8 依照剛剛 Word 版內容往下排，我就不贅述全部文字了，你可以照樣式複製填滿 -->
+        <!-- proj-3 ~ proj-8 用同樣結構 h2/p/h3/ul ... -->
+      </section>
+    </div>
+
+    <footer>
+      Execution Record · Andy Wong
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
