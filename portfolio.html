@@ -19,17 +19,22 @@
           <a href="index.html" class="pf-link">履歷 Resume</a>
           <a href="portfolio.html" class="pf-link pf-link-active">執行紀錄 Portfolio</a>
         </div>
-
-        <!-- 手機漢堡選單（和履歷共用同一套 JS / CSS） -->
-        <button id="menuToggle" class="menu-toggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-        <nav id="mobileNav" class="mobile-nav">
-          <a href="index.html" class="nav-item">履歷 Resume</a>
-          <a href="portfolio.html" class="nav-item">執行紀錄 Portfolio</a>
-        </nav>
+    
+     <!-- 手機漢堡按鈕 -->
+    <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+        
       </div>
     </header>
+    
+    <!-- 手機右側滑出的選單 -->
+<nav id="mobileNav" class="mobile-nav">
+  <a href="index.html" class="nav-item">履歷 Resume</a>
+  <a href="portfolio.html" class="nav-item">執行紀錄 Portfolio</a>
+  <button type="button" id="navLangToggle" class="nav-item nav-btn">切換語言</button>
+  <!--<button type="button" id="navDownload" class="nav-item nav-btn">下載 PDF</button>-->
+</nav>
 
     <div class="portfolio-layout">
       <!-- 左側目錄 -->
