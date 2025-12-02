@@ -51,4 +51,37 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+  
+    // ---------- Portfolio 側邊欄點擊 → 捲到對應區塊 ----------
+  const pfButtons = document.querySelectorAll(".pf-nav-item");
+  if (pfButtons.length > 0) {
+    pfButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.pfTarget;
+        const target = document.getElementById(id);
+        if (!target) return;
+        pfButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  // ---------- 手機漢堡選單 ----------
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileNav = document.getElementById("mobileNav");
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener("click", () => {
+      const visible = mobileNav.style.display === "block";
+      mobileNav.style.display = visible ? "none" : "block";
+    });
+
+    // 點到連結時收起
+    mobileNav.querySelectorAll(".nav-item").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileNav.style.display = "none";
+      });
+    });
+  }
+  
 });
