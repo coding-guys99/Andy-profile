@@ -53,8 +53,25 @@
           <button id="langToggle" class="btn-ghost">EN</button>
          <!-- <button id="btnDownload" class="btn-primary">PDF</button>-->
         </div>
+        
+        <!-- 手機漢堡按鈕 -->
+    <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+        
       </div>
     </header>
+    
+    <!-- 手機右側滑出的選單 -->
+<nav id="mobileNav" class="mobile-nav">
+  <a href="index.html" class="nav-item">履歷 Resume</a>
+  <a href="portfolio.html" class="nav-item">執行紀錄 Portfolio</a>
+  <button type="button" id="navLangToggle" class="nav-item nav-btn">切換語言</button>
+  <button type="button" id="navDownload" class="nav-item nav-btn">下載 PDF</button>
+</nav>
+
+<!-- 手機選單背景遮罩 -->
+<div id="mobileNavBackdrop" class="mobile-nav-backdrop"></div>
 
     <div class="sections">
       <!-- 左側：摘要 + 經驗 + 專案 -->
