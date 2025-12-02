@@ -772,3 +772,83 @@ footer {
     display: none;
   }
 }
+
+/* ===== Portfolio 排版大幅優化 ===== */
+
+/* 整體文字行距與段落距離 */
+.pf-content {
+  font-size: 14px;
+  color: #e5e7eb;
+  line-height: 1.65; /* 讓文字不擠 */
+}
+
+/* 每個 Project 區塊變得更清晰、有呼吸感 */
+.pf-section {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  margin-bottom: 20px;
+}
+
+/* 專案標題 H2 */
+.pf-section h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f1f5f9;
+  line-height: 1.4;
+}
+
+/* Sub-info（Client / Role / Region）字距調整 */
+.pf-section > p {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  font-size: 13.5px;
+}
+
+/* Responsibilities / Outcome 小標題 */
+.pf-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: #60a5fa; /* 藍色科技感更明顯 */
+  letter-spacing: 0.5px;
+}
+
+/* 列表間距 + 更整齊的左縮排 */
+.pf-section ul {
+  margin: 0 0 10px 0;
+  padding-left: 20px;
+}
+
+.pf-section li {
+  margin-bottom: 6px; /* 每項保留呼吸感 */
+  line-height: 1.55;
+}
+
+/* 左側目錄排版優化 */
+.pf-nav-item {
+  padding: 8px 10px;
+  font-size: 13.5px;
+}
+
+.pf-nav-item.active {
+  background: rgba(59, 130, 246, 0.20);
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  color: #93c5fd;
+}
+
+/* 區塊之間加明顯分隔（桌機看起來更有層次） */
+.pf-section + .pf-section {
+  margin-top: 22px;
+}
+
+/* 手機優化：卡片不要太厚重 */
+@media (max-width: 800px) {
+  .pf-section {
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+}
